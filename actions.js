@@ -2,6 +2,14 @@ import 'whatwg-fetch';
 
 // here go action definitions
 
+export function clickTab(tabId) {
+    return {
+        type: 'CLICK_TAB',
+        tabId: tabId
+    }
+}
+
+
 export function connect(url) {
     return (dispatch, getState) => {
         if (! getState().connected) {

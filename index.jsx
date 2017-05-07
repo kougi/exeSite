@@ -1,7 +1,6 @@
 import configureStore from './store'
 import {Provider, connect} from 'react-redux'
 import * as actions from './actions'
-import { initialState } from './reducers'
 
 import {
   BrowserRouter as Router,
@@ -17,7 +16,7 @@ import React from 'react'
 import { ServerList } from './components/server-list'
 import { ServerStatsMain,ServerStatsSide } from './components/server-info'
 
-const store = configureStore(initialState);
+const store = configureStore();
 const history = createBrowserHistory();
 
 
@@ -72,7 +71,7 @@ class Header extends React.Component{
             <header className="siteHeader">
             {/* logo */}
             <h1 className="logo col3"><img src="img/exelogo.png" /> Clan<span>.exe</span></h1>
-              
+
             <HeaderInfo  greeting="Clan.exe" />
                 <Nav />
 
@@ -92,9 +91,9 @@ class MapListItem extends React.Component{
                 <img src={this.props.imgURL} />
                 <div className="mapDetails">
                 <h5>{this.props.mapName}</h5>
-                <figure>Rating: <span class="rating">{this.props.Rating}</span> <span class="voteQty">(4 votes)</span></figure>
+                <figure>Rating: <span className="rating">{this.props.Rating}</span> <span className="voteQty">(4 votes)</span></figure>
                 </div>
-                    
+
                 <div className="mapPodium">
                     <ul>
                         <li>{this.props.topPlayer}</li>
@@ -137,7 +136,7 @@ class ServerInfo extends React.Component{
         <h3>Relaxed Running</h3>
             <ServerStatsMain />
             <ServerStatsSide />
-            
+
             Main container
             <MapList />
         </section>
@@ -162,7 +161,7 @@ class App extends React.Component {
     render() {
         return <Router history={history}>
             <div className="containerInner">
-                
+
                 <Header />
                 <ServerList />
                 <ServerInfo />
