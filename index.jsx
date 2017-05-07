@@ -29,7 +29,8 @@ class Home extends React.Component {
 
 class About extends React.Component {
     render () {
-        return <h2>we are cool, no doubt</h2>
+        return <div><h2>we are cool, no doubt</h2>
+        <ServerInfo /></div>
     }
 }
 
@@ -40,9 +41,9 @@ class Nav extends React.Component{
         return (
               <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">etc</a></li>
+                        <li><Link to="/exeSite/">Home</Link></li>
+                    <li><Link to="/exeSite/about">About</Link></li>
+                        <li><a href="#">estc</a></li>
                         <li><a href="#">Nav</a></li>
                         <li><a href="#">etc</a></li>
                     </ul>
@@ -165,12 +166,8 @@ class App extends React.Component {
                 <Header />
                 <ServerList />
                 <ServerInfo />
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                </ul>
-                <Route exact path="/" component={Home}/>
-                <Route path="/about" component={About}/>
+                <Route exact path="/exeSite/" component={Home}/>
+                <Route path="/exeSite/about" component={About}/>
             </div>
         </Router>
     }
