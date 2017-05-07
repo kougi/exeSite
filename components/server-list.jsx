@@ -14,11 +14,10 @@ class ServerListItem extends React.Component {
 
     render() {
         let tabClass;
-        if (this.props.activeTab == this.props.id) {
-            tabClass = 'active';
-        } else {
-            tabClass = 'album'
-        }
+        if (this.props.activeServerId == this.props.id) {
+            tabClass = 'current';
+        } 
+       // else { tabClass = 'album'}
 
         return (
             <li className={'tab-link ' + tabClass}
@@ -40,7 +39,7 @@ class ServerListItem extends React.Component {
 
 ServerListItem = connect((state) => {
     return {
-        activeTab: state.activeTab
+        activeServerId: state.activeServerId
     }
 })(ServerListItem);
 
@@ -60,3 +59,4 @@ export class ServerList extends React.Component {
         );
     }
 }
+

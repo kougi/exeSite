@@ -126,13 +126,24 @@ class MapList extends React.Component{
     }
 }
 
+
+//server info
 //
 class ServerInfo extends React.Component{
+    
     render() {
+
+        let activeServer;
+        for (let i in this.props.servers) {
+        if (this.props.servers[i].id === this.props.activeServerId) {
+          activeServer = this.props.servers[i];
+        }
+        }
         return (
         <main className="serverTabList col5 last">
         {/* tab 1*/}
         <section id="tab-1" className="tab-content current">
+        <h3>{activeServer.name}</h3>
         <h3>Relaxed Running</h3>
             <ServerStatsMain />
             <ServerStatsSide />
@@ -145,8 +156,7 @@ class ServerInfo extends React.Component{
     }
 }
 
-
-
+ServerInfo = connect((state) => {return {activeServerId: state.activeServerId, servers: state.servers}})(ServerInfo);
 
 
 
