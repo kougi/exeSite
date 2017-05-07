@@ -113,13 +113,13 @@ class MapList extends React.Component{
         <article className="mapList mapRecords">
          <ul>
             <MapListItem mapName="Asylum" Rating="+4" topPlayer="Kougi.exe" imgURL="http://xonotic.co/resources/mapshots/maps/asylum.jpg"/>
-            <MapListItem mapName="Bloodrun" Rating="+4" topPlayer="Kougi.exe" imgURL="http://xonotic.co/resources/mapshots/maps/bloodrun_ql.jpg"/>
-            <MapListItem mapName="Aerowalk" Rating="+4" topPlayer="Kougi.exe" imgURL="http://xonotic.co/resources/mapshots/maps/cpm22.jpg"/>
-            <MapListItem mapName="Warfare" Rating="+4" topPlayer="Morosophos.exe" imgURL="http://xonotic.co/resources/mapshots/maps/warfare.jpg"/>
-            <MapListItem mapName="Asylum" Rating="+4" topPlayer="Kougi.exe" imgURL="http://xonotic.co/resources/mapshots/maps/asylum.jpg"/>
-            <MapListItem mapName="Asylum" Rating="+4" topPlayer="Kougi.exe" imgURL="http://xonotic.co/resources/mapshots/maps/asylum.jpg"/>
-            <MapListItem mapName="Asylum" Rating="+4" topPlayer="Kougi.exe" imgURL="http://xonotic.co/resources/mapshots/maps/asylum.jpg"/>
-            <MapListItem mapName="Asylum" Rating="+4" topPlayer="Kougi.exe" imgURL="http://xonotic.co/resources/mapshots/maps/asylum.jpg"/>
+            <MapListItem mapName="Bloodrun" Rating="+1" topPlayer="Kougi.exe" imgURL="http://xonotic.co/resources/mapshots/maps/bloodrun_ql.jpg"/>
+            <MapListItem mapName="Aerowalk" Rating="+3" topPlayer="Kougi.exe" imgURL="http://xonotic.co/resources/mapshots/maps/cpm22.jpg"/>
+            <MapListItem mapName="Warfare" Rating="+2" topPlayer="Morosophos.exe" imgURL="http://xonotic.co/resources/mapshots/maps/warfare.jpg"/>
+            <MapListItem mapName="Stormkeep" Rating="+8" topPlayer="Kougi.exe" imgURL="http://xonotic.co/resources/mapshots/maps/stormkeeptdm.jpg"/>
+            <MapListItem mapName="Farewell Laserfun" Rating="+4" topPlayer="Kougi.exe" imgURL="http://xonotic.co/resources/mapshots/maps/farewell_laserfun.jpg"/>
+            <MapListItem mapName="Little Mexico" Rating="-1" topPlayer="Kougi.exe" imgURL="http://xonotic.co/resources/mapshots/maps/littlemexico_v1r2.jpg"/>
+            <MapListItem mapName="quarantine ql" Rating="+4" topPlayer="Kougi.exe" imgURL="http://xonotic.co/resources/mapshots/maps/quarantine_ql.jpg"/>
          </ul>
         </article>
         );
