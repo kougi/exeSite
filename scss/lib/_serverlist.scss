@@ -1,0 +1,86 @@
+
+$serverHover: #bccaf6;
+	aside.serverList{
+	// width: 35%;
+	// @include grid-column(3);
+	// @include grid-collapse;
+@include span(3 of $colNum wide);
+margin-right: 0;
+	background-color: #fff;}
+
+
+
+		ul.tabs li.current{
+			background: #ededed;
+			color: #222;
+			border-top: solid 1px #666;
+    		border-bottom: solid 1px #aaa;
+    		border-left: solid 3px red;
+    		border-right: solid 1px transparent;
+		}
+
+	
+
+		.tab-content.current{
+			display: inherit;
+		}
+//server list
+ul.tabs>li{
+			background: none;
+			color: #222;
+			display: inline-block;
+			cursor: pointer;
+			border: solid 1px transparent;
+			border-left: solid 3px transparent;
+			border-right: solid 1px #aaa;
+			@include transition(all, 0.1s, ease);
+			&:hover{
+		background-color: $serverHover;
+		cursor: pointer;
+	}
+		}
+//Server Item
+.serverItem{
+	display: block;
+	@include transition(all, 0.3s, ease-in-out);
+	color: #000;
+	
+	&:active{
+		background-color: #bcdaf6;
+	}
+	h2{
+		font-size: 1.1em;
+		// text-align:center;
+		padding: 10px 10px 0px 10px;
+		>span{
+			color:red;
+		}
+	}
+	ul{font-size:0;}
+	//List items (most recent win, etc)
+	ul>li{
+		color: #888;
+		font-size: 13px;
+		display: inline-block;
+		width: 49.5%;
+		 // background-color:yellow;
+		padding: 2px 10px 5px 18px;
+		text-shadow: 0 0px 1px #fff;
+		//most recent, top player
+		i{
+			font-size: 0.8em;
+	    	color: #ff9696;
+	    	display: inline-block;
+  			  width: 100%;
+		}
+		
+		&:nth-child(odd){
+
+			margin-right: 1%;
+
+		}
+		&:nth-child(4){
+			text-align:right;
+		}
+	}
+}

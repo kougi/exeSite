@@ -1,0 +1,459 @@
+
+//sass --watch D:\www\exe\scss:D:\www\exe\css
+@import "lib/grid/_columns.scss";
+@import "lib/general/_reset.scss";
+@import "lib/general/_mixins.scss";
+@import "lib/general/_styling.scss";
+// @import "lib/grid/_neat.scss";
+
+//Mixins
+
+//Animation timings
+$fastDuration: .1s !default;
+$mediumDuration: .3s !default;
+$slowDuration: .5s !default;
+$gutter: 10px;
+
+// Colors
+$primaryColor: #3498db;
+$secondaryColor: #bed62e;
+$colorBorder: #186396;
+$fontSize: 14px;
+li,ul,div,h1,h2,h3,h4{
+	box-sizing: border-box;
+}
+
+//basic overrides
+
+//Main styles
+
+body{
+	background-color:#aaa;
+	background: url('../img/bg-bliss.jpg');
+	font-family: consolas, "lucida console";
+}
+//logo
+header{
+}
+
+.logo{
+	font-size: $fontSize;
+	// @include clearfix;
+	font-size: 3.1em;
+	font-weight: bold;
+	// float:left;
+	// padding: $gutter;
+	line-height: 104px;
+	padding-left: $gutter;
+
+	// @include grid-column(3);
+	span{color:red;}
+	img{
+		float: left;
+		
+    margin-right: 15px;
+
+	}
+
+	
+}
+//navigation ----------------------------------
+header.siteHeader
+{
+	@include clearfix;
+	position: relative;
+	min-height: 140px;
+
+
+
+	aside.headerInfo{
+
+		// @include grid-column(5);
+		// @include push(2 of 8);
+		// @include pre(25%);
+		@include span(4 of $colNum last);
+		@include pre(1 of $colNum);
+		// padding: $gutter;
+		// @include gutters(3em);
+		background-color:blue;
+		>article{
+			@include span(4 of $colNum);
+			padding: $gutter;
+			background-color: red;
+			&:last-child{
+				@include omega;
+			}
+		}
+
+	}
+}
+
+header>nav{
+		// font-size: $fontSize;
+		// margin-top:30px;
+		// margin-left: $gutter;
+		display: block;
+		padding-left: $gutter;
+		position:absolute;
+		bottom: 0px;
+		left: 0px;
+		
+		// background-color:blue;
+	li{ display: inline-block;}
+		a{ 
+			display: block;
+			background-color:red;
+			padding: $gutter;
+		}
+	}
+
+#container{
+	background: rgba(255,255,255,0.7);
+	border-radius: 5px;
+	padding: 40px 10px 10px 10px;
+	width: 70%;
+	max-width: 1300px;
+	min-width: 1000px;
+	margin: 20px auto 0 auto;
+	border:solid 1px #000;
+	border-left-color: #fff;
+	border-top-color: #fff;
+	position: relative;
+	box-shadow:0 0 3px 1px rgba(0,0,0,0.5);
+	//icon on left
+	&:before{
+		position: absolute;
+		top: 13px;
+		left: 13px;
+		background-image: url('../img/bbfav.png');
+		height:16px;
+		width:16px;
+		content: '';
+	}
+}
+	//page title
+	.pageTitle{
+		position: absolute;
+		top: 4px;
+		left: 5px;
+		top: 13px;
+	    left: 40px;
+	    text-shadow: 0 1px 2px #FFFFFF;
+	}
+	//Decoration
+	.windowsButtons{
+		position: absolute;
+		right: $gutter;
+		top: 5px;
+		li{
+			height: 30px;
+		    width: 30px;
+		    background-color: blue;
+		    display: inline-block;
+		    opacity: 0.8;
+		    background-color: #ff0000;
+		    border: solid 1px #fff;
+		    border-radius: 4px;
+		    line-height: 26.3px;
+		    vertical-align: top;
+		    text-align: center;
+		    box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.7);
+			&:hover{
+				cursor: pointer;
+  				opacity: 1;
+			}
+			&:last-child:hover {
+			  background-color: #bf3737;
+			}
+		}
+	}
+
+
+
+.containerInner{
+// @include container; 
+  // @include grid-visual;
+  @include container;
+
+box-shadow:inset 0 0 3px 1px rgba(0,0,0,0.5);
+// background-color: #fff;
+// @include grid-container;
+//   @include grid-visual;
+  // @include grid-collapse;
+
+border-radius: 3px;
+border:solid 1px #000;
+	border-left-color: #fff;
+	border-top-color: #fff;
+
+
+	// background: #eeeeee;
+// background: -moz-linear-gradient(top, #eeeeee 0%, #eeeeee 100%);
+// background: -webkit-linear-gradient(top, #eeeeee 0%,#eeeeee 100%);
+// background: linear-gradient(to bottom, #eeeeee 0%,#eeeeee 100%);
+}
+//Inner Container
+.innerArea{
+	// padding: $gutter;
+	// display: flex;
+
+	
+}
+
+
+
+//Main container ----------------------------
+main.serverTabList {
+    // width: 65%;
+    // @include grid-column(5);
+    // @include bleed(10px);
+    // @include show-grid(overlay);
+    // @include span(5 nest);
+    // @include grid-collapse;
+    // @include grid-shift(1);
+
+}
+	.tab-content{
+			display: none;
+			background: #ededed;
+			padding: 10px;
+		}
+main>section{
+	// padding: $gutter;
+	// background-color: #ffadad;
+	// margin-left: 1%;
+	border-top: solid 1px #555;
+
+
+	h3{
+		font-size: 1.5em;
+	}
+	//content
+	article{
+		// margin: $gutter;
+		padding: 10px;
+		
+		// background-color: #fff;
+		border: solid 1px #000;
+		h4{
+			border-bottom: solid 1px red;
+			margin-bottom:5px;
+		}
+
+	}
+}
+//Server list -------------------------------
+@import "lib//_serverlist.scss";
+
+
+
+
+
+
+
+//Map list ---------------
+
+.mapList{
+>ul
+	{
+		font-size: 0;
+		>li
+		{
+			overflow: hidden;
+			position: relative;
+			background-color: #00fff0;
+			display: inline-block;
+			// width: 24%;
+			width: 9.38vw;
+    		height: 9.38vw;
+    		margin-right: 1.3%;
+			font-size: $fontSize;
+			margin-bottom: 10px;
+			&:nth-child(4n){
+				margin-right: 0;
+			}
+			&:hover{
+				cursor:pointer;
+				box-shadow: 0 0 3px 1px rgba(0,0,0,0.7);
+				img{filter: saturate(0%) ;
+  					-webkit-filter: saturate(0%) ;
+  					-moz-filter: saturate(0%) ;}
+				.mapDetails{
+					//background-color: rgba(0,0,0,1);
+				}
+				.mapPodium{
+					bottom: 0;
+					opacity: 1;
+				}
+			}
+			img{
+				width: 100%;
+				display: block;
+				@include transition(all, 0.3s, ease-in);
+				height: 100%;
+    			width: auto;
+			}
+		}
+	}
+}
+
+
+	.mapDetails,.mapPodium{
+		position: absolute;
+		left: 0;
+		padding: 10px;
+		background-color: rgba(0,0,0,0.5);
+		width: 100%;
+		color: #fff;
+	}
+	.mapDetails{
+		top: 0px;
+		h5{
+			font-size: 1.2em;
+		}
+		figure{
+			font-size: 0.8em;
+			.rating{
+				color: green;
+				font-weight: bold;
+			}
+			.voteQty{
+				font-size: 0.7em;
+			}
+		}
+	}
+
+	.mapPodium{
+		bottom: -60px;
+		// bottom: 0;
+		opacity: 0;
+		@include transition(all, 0.5s, ease);
+
+		ul{
+			//Medals
+			li{
+				position: relative;
+				padding-left: 20px;
+				font-size: 0.8em;
+				margin-top: 4px;
+				&:before{
+					position: absolute;
+					content: '';
+					border-radius: 50%;
+					width: 8px;
+					height: 8px;
+					background-color: red;
+					left: 2px;
+				}
+				//gold
+				&:nth-child(1){
+					margin-top: 0px;
+					font-size: 1em;
+					
+					&:before{
+					left: 0px;
+					width: 13px;
+					height: 13px;
+					background-color: gold;
+					}
+				}
+				//silver
+				&:nth-child(2):before{
+					background-color: silver;
+				}
+				//bronze
+				&:nth-child(3):before{
+					background-color: orange;
+				}
+			}
+		}
+	}
+
+
+
+
+
+//Recent records
+.recentRecords{
+	@include span(5 of $colNum);
+	ul{
+		span{
+			color:red;
+		}
+	}
+}
+.serverData{
+	@include span(3 of $colNum last);
+}
+
+
+
+
+
+
+
+//Keyframes / Animationdsd
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+//Tooptip
+//The good stuff
+.tooltip-toggle {
+  cursor: pointer;
+  position: relative;
+
+  
+  //Tooltip text container
+  &::before {
+        position: absolute;
+    top: 26px;
+    left: -30px;
+    background-color: #2B222A;
+    border-radius: 5px;
+    color: #fff;
+    content: attr(aria-label);
+    padding: 1rem;
+    text-transform: none;
+    transition: all 0.5s ease;
+    width: 160px;
+    z-index: 100;
+  }
+
+  //Tooltip arrow
+  &::after {
+      position: absolute;
+    top: 21px;
+    left: 49%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #2B222A;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+    margin-left: -5px;
+    width: 0;
+  }
+  
+  //Setting up the transition
+  &::before,
+  &::after {
+    color: #efefef;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+  }
+  
+  //Triggering the transition
+  &:focus::before,
+  &:focus::after,
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+    transition: all 0.75s ease;
+  }
+}
+
+

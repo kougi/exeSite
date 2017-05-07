@@ -1,0 +1,17 @@
+//transition
+
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+//@include transition(all, 1s, ease-in-out);
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
